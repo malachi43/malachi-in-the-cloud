@@ -1,0 +1,19 @@
+{
+  "name": "sport_notification",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-sns": "^3.946.0",
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1"
+  }
+}
