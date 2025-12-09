@@ -6,7 +6,7 @@ const { api_key } = config.sport_data;
 const SPORT_DATA_IO_URL = `https://api.sportsdata.io/v4/soccer/scores/json/Areas?key=${api_key}`;
 const PORT = process.env.PORT || 5000;
 
-export const handler = async (event) => {
+export const handler = async () => {
   let result = null;
   try {
     result = await axios.get(SPORT_DATA_IO_URL);
