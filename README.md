@@ -13,3 +13,24 @@ EVENT_BRIDGE (The schedules whent the lambda function will be invoked ) ------> 
 
 
 EVENT_BRIDGE ---> AWS_LAMBDA --->  AWS_SNS --> Email
+
+
+Using Terraform
+- We use the command `aws ssm put-parameter --name "<NAME>" --value "<VALUE>" --type "SecureString"` to store our keys (API KEY) with a name in the AWS System Manager Store.
+
+- Create a .tf file (file extension for terraform) and populate it with the required configuration
+
+- Run the command `terraform init` (Initialize terraform directory, provider plugin and setup local backend)
+
+- Run the command `terraform fmt` (Format terraform config files to make it clean, readable and follow best practices)
+
+- Run the command `terraform validate` (Check Terraform configurations for syntax errors and correctness)
+
+- Run the command `terraform plan` (Show preview of changes Terraform will make to your infrastructure before applying them)
+
+- Run the command `terraform apply` (Create or update the infrastructure based on the Terraform configuration)
+
+
+- After `terraform apply` has successfully ran, you need to go your AWS Console -> Search for SNS -> Click on the Simple Notification Service -> Click on the topic you just created -> Create a subscription for the topic (You can subscribe your email to the topic)
+
+The subscription to the topic need to be done manually as that cannot be automated.

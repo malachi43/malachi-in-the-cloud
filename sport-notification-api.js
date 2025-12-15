@@ -1,8 +1,9 @@
 import axios from "axios";
 import config from "./config/index.js";
 import publishToSnsTopic from "./aws/sns.init.js";
+import getValueWithKeyFromAwsSystemManager from "./getFromAWSSystemManager.js";
 
-const { api_key } = config.sport_data;
+const api_key = await getValueWithKeyFromAwsSystemManager("sport-data-io-api-key")
 const SPORT_DATA_IO_URL = `https://api.sportsdata.io/v4/soccer/scores/json/Areas?key=${api_key}`;
 const PORT = process.env.PORT || 5000;
 
