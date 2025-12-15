@@ -31,6 +31,15 @@ Using Terraform
 - Run the command `terraform apply` (Create or update the infrastructure based on the Terraform configuration)
 
 
-- After `terraform apply` has successfully ran, you need to go your AWS Console -> Search for SNS -> Click on the Simple Notification Service -> Click on the topic you just created -> Create a subscription for the topic (You can subscribe your email to the topic)
+- After `terraform apply` has successfully ran
 
-The subscription to the topic need to be done manually as that cannot be automated.
+#### Add Subscription to SNS Topic
+- Go to your AWS Console 
+- Enter `SNS` in the Search bar 
+-  Click on the `Simple Notification Service `
+- Click on the topic you just created
+- Choose a protocol (in my case I chose an Email Protocol)
+- Enter the email to be subscribed to the topic
+- Then click on create (after few seconds you would receive an email to confirm the subscription you just created)
+
+###### NOTE: The subscription to the topic need to be done manually as this process cannot be automated.
