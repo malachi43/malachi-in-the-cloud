@@ -43,3 +43,7 @@ Using Terraform
 - Then click on create (after few seconds you would receive an email to confirm the subscription you just created)
 
 ###### NOTE: The subscription to the topic need to be done manually as this process cannot be automated.
+
+
+####  Removing all resources you created in your terraform configuration file
+- Run the command `terraform destroy` to remove all the resources earlier created.
